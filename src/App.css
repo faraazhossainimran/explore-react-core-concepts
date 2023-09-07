@@ -40,3 +40,7 @@
 .read-the-docs {
   color: #888;
 }
+.design {
+  border: 2px solid tomato;
+  border-radius: 5px;
+}
