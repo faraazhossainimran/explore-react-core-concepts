@@ -1,17 +1,23 @@
+import { useState } from "react";
+import Team from "./Team";
 import "./App.css";
 function App() {
-  function handleClick () {
-    alert('clicked')
+  const [count, setCount] = useState(0);
+  const handleAdd = () => {
+    const newCount = count + 1;
+    setCount(newCount);
   }
-  function handleClick2 (num) {
-    alert(num + 5)
+  const handleReduce = () => {
+    const newReduce = count - 1;
+    setCount(newReduce)
   }
   return (
     <>
     <div>
-      <h2>React core cncept</h2>
-      <button onClick={handleClick}>Click 1</button>
-      <button onClick={() => {handleClick2(20)}}>click 2</button>
+      <Team></Team>
+      <h2>Counter {count}</h2>
+      <button onClick={handleAdd}>add</button>
+      <button onClick={handleReduce}>Decrease</button>
     </div>
     </>
   )
