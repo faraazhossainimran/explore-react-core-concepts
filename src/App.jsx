@@ -1,23 +1,12 @@
 import { useState } from "react";
-import Team from "./Team";
+// import Team from "./Team";
+import Users from "./Users";
 import "./App.css";
 function App() {
-  const [count, setCount] = useState(0);
-  const handleAdd = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-  }
-  const handleReduce = () => {
-    const newReduce = count - 1;
-    setCount(newReduce)
-  }
   return (
     <>
     <div>
-      <Team></Team>
-      <h2>Counter {count}</h2>
-      <button onClick={handleAdd}>add</button>
-      <button onClick={handleReduce}>Decrease</button>
+      <Users></Users>
     </div>
     </>
   )
